@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: agg
+  kafka:
+    bootstrap-server: ${KAFKA_BOOTSTRAP_SERVER}
+  data:
+    mongodb:
+      database: ${MONGO_DATABASE}
+      username: ${MONGO_USER}
+      password: ${MONGO_PASSWORD}
+      host: ${MONGO_HOST}
+      port: ${MONGO_PORT}
+  jpa.hibernate.ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_URL}:${MYSQL_PORT}/${MYSQL_DATABASE}
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+redis:
+  server: ${REDIS_URL}
+  port: ${REDIS_PORT}
