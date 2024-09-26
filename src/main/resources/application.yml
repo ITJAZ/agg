@@ -5,6 +5,7 @@ spring:
     bootstrap-server: ${KAFKA_BOOTSTRAP_SERVER}
   data:
     mongodb:
+      authentication-database: admin
       database: ${MONGO_DATABASE}
       username: ${MONGO_USER}
       password: ${MONGO_PASSWORD}
