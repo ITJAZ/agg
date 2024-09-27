@@ -2,14 +2,14 @@ package io.almonds.agg.redis;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
-@Component
+@Configuration
 @Slf4j
 public class JedisManager {
 
@@ -27,7 +27,7 @@ public class JedisManager {
   }
 
   @Bean
-  public JedisPool getJedisPool() {
+  JedisPool getJedisPool() {
     return jedisPool;
   }
 
